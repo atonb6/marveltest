@@ -1,0 +1,41 @@
+.marvel-cards {
+  &__title {
+    color: $white;
+  }
+
+  &__message {
+    color: $white;
+  }
+
+  #myResponseArea{
+      color: $white;
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+
+  .marvel-container {
+    &__card {
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+
+      img {
+        object-fit: cover;
+        max-height: 320px;
+      }
+
+      &__data {
+        padding: 15px;
+
+        h3 {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        h6 {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,480 @@
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+html {
+  font-size: 16px;
+  max-width: 1920px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: $primary-font;
+  font-size: 1rem;
+  color: $black;
+  font-style: normal;
+  overflow-x: hidden;
+  max-width: 100%;
+  counter-reset: contador;
+  background: rgb(84, 15, 15);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(84, 15, 15, 1) 0%,
+    rgba(31, 29, 29, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(84, 15, 15, 1) 0%,
+    rgba(31, 29, 29, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(84, 15, 15, 1) 0%,
+    rgba(31, 29, 29, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#540f0f",endColorstr="#1f1d1d",GradientType=1);
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  li {
+    list-style: none;
+
+    a {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      line-height: 1.54;
+    }
+  }
+}
+
+a {
+  transition: $trans;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+    color: $yellow;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  &.hr {
+    &--bottom {
+      margin-top: 70px;
+      margin-bottom: 30px;
+    }
+
+    &__space {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 0.875rem;
+    line-height: 1.3;
+  }
+}
+
+select,
+button,
+input {
+  &[type="radio"] {
+    appearance: auto;
+  }
+
+  appearance: none;
+  border: none;
+  background-color: white;
+
+  &:hover {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.container {
+  max-width: 1280px;
+
+  @include media-breakpoint-down(xl) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Helpers
+--------------------------------------------------------------*/
+.sticky {
+  position: sticky;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.center-absolute {
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.iframe-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.offset-down {
+  transform: translateY(10%);
+  z-index: 2;
+  position: relative;
+}
+
+.offset-up {
+  transform: translateY(-50%);
+  z-index: 2;
+  position: relative;
+
+  &--100 {
+    transform: none;
+    margin-top: -100px;
+  }
+}
+
+.mt-2n {
+  &:nth-child(even) {
+    margin-top: 40px;
+  }
+}
+
+.hidden{
+  display: none;
+}
+
+textarea {
+  border: none;
+}
+
+
+.btn {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ec1d24;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0;
+
+  &:hover {
+    color: $yellow;
+    background-color: #1d1d1d;
+  }
+}
+/*--------------------------------------------------------------
+  # input button file
+  --------------------------------------------------------------*/
+
+.custom-file-input {
+  color: $white;
+  height: unset;
+  opacity: 1;
+  background-color: $blue !important;
+  width: auto;
+
+  &.profilepicture {
+    &::before {
+      content: "Cambia tu foto de perfil";
+    }
+  }
+
+  &::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  &::before {
+    content: "Sube tu CV";
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+
+  &:hover::before {
+    border-color: black;
+  }
+
+  &:active {
+    outline: 0;
+
+    &::before {
+      background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+  # Backgrounds
+  --------------------------------------------------------------*/
+.bg-black {
+  background-color: $black;
+  color: $white;
+
+  &.bg-offset {
+    &:after {
+      background-color: $black;
+    }
+  }
+}
+
+.bg-lightgray {
+  background-color: #f5f5f5;
+  color: $black;
+
+  &.bg-offset {
+    &:after {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.bg-darkgray {
+  background-color: #bdbdbd;
+  color: $black;
+}
+
+.bg-mediumgray {
+  background-color: #dadada;
+  color: $black;
+}
+
+.bg-offset {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--right {
+    &:after {
+      left: 100%;
+      right: auto;
+    }
+  }
+
+  &--left {
+    &:after {
+      left: auto;
+      right: 100%;
+    }
+  }
+}
+
+.rounded-circle {
+  &__data {
+    font-weight: bold;
+
+    &--blue {
+      color: $blue;
+    }
+  }
+
+  &__info {
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Fonts
+  --------------------------------------------------------------*/
+
+h1 {
+  font-size: 3.375rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.0625rem;
+  color: #212121;
+}
+
+h3 {
+  font-size: 1.125rem;
+  color: #212121;
+}
+
+h4 {
+  font-size: 0.8125rem;
+  color: #3c3c3c;
+}
+
+/*--------------------------------------------------------------
+  # BreadCrumbs
+  --------------------------------------------------------------*/
+
+ul.breadcrumb {
+  &__list {
+    padding: 10px 16px;
+    list-style: none;
+
+    font-weight: 500;
+    color: #aaaaaa;
+    li {
+      display: inline;
+      font-size: 0.8125rem;
+
+      strong {
+        color: #40ce74;
+      }
+
+      a {
+        color: #3c3c3c;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    li + li {
+      &:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+      }
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+  # checkbox
+  --------------------------------------------------------------*/
+
+input[type="checkbox"] {
+  + {
+    label {
+      display: block;
+      margin: 0.2em;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0.2em;
+      &:before {
+        content: "\2714";
+        border: 0.1em solid #000;
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        margin-right: 8px;
+        vertical-align: bottom;
+        color: transparent;
+        transition: 0.2s;
+      }
+      &:active {
+        &:before {
+          transform: scale(0);
+        }
+      }
+    }
+  }
+  display: none;
+  &:checked {
+    + {
+      label {
+        &:before {
+          background-color: $blue;
+          border-color: $blue;
+          color: #fff;
+          padding-left: 3px;
+        }
+      }
+    }
+    &:disabled {
+      + {
+        label {
+          &:before {
+            transform: scale(1);
+            background-color: #bfb;
+            border-color: #bfb;
+          }
+        }
+      }
+    }
+  }
+  &:disabled {
+    + {
+      label {
+        &:before {
+          transform: scale(1);
+          border-color: #aaa;
+        }
+      }
+    }
+  }
+}

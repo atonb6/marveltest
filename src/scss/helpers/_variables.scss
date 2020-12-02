@@ -1,0 +1,62 @@
+// colors
+$green: #40ce74;
+$grey: #9e9b9c;
+$darkgray: #53565a;
+$blue: #1567a0;
+$purple: #8854b7;
+$red: #ce4f4f;
+$yellow: #a89700;
+
+
+.black {
+  color: $black;
+}
+
+.green {
+  color: $green;
+}
+
+.gray {
+  color: $grey;
+}
+
+.darkgray {
+  color: $darkgray;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-grey {
+  background-color: $grey;
+}
+
+.bg-darkgray {
+  background-color: $darkgray;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-purple {
+  background-color: $purple;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.red {
+  color: $red;
+}
+
+// transitions
+$trans: all 0.3s ease 0s;
+
+// fonts
+$primary-font: "Krub",
+sans-serif;
+$secondary-font: "Krub",
+sans-serif;

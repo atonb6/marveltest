@@ -1,0 +1,25 @@
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Import Helpers
+@import "helpers/mixins";
+@import "helpers/variables";
+
+// Import Base
+@import "base/fonts";
+@import "base/globals";
+
+// Import Layouts
+
+@import "layout/footer";
+@import "layout/header";
+
+// Import Components
+
+@import "components/cards";
+// Import Modules
+
+
+// Plugins
+@import "./plugins/slick-theme";
+@import "./plugins/slick";

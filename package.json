@@ -1,0 +1,53 @@
+{
+    "title": "MarvelAPI",
+    "name": "marvelapi",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
+    "description": "Ejercicio",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "https://www.philippeparis.net",
+    "bugs": {
+        "email": "contacto@philippeparis.net"
+    },
+    "license": "MIT",
+    "author": "Philippe Paris",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.1",
+        "bootstrap": "^4.5.3",
+        "concat": "^1.0.3",
+        "gulp-order": "^1.2.0",
+        "infinite-scroll": "^3.0.6",
+        "jquery": "^3.5.1",
+        "jquery-match-height": "^0.7.2",
+        "jquery-migrate": "^1.4.1",
+        "jquery.easing": "^1.4.1",
+        "slick-carousel": "^1.8.1"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.13",
+        "del": "^5.1.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-header": "^2.0.9",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-newer": "^1.4.0",
+        "gulp-notify": "^3.2.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-uglify": "^3.0.2",
+        "merge-stream": "^2.0.0",
+        "popper.js": "^1.16.1"
+    }
+}
