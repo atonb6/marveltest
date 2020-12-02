@@ -6,6 +6,10 @@
             a{
                 color: $white;
                 text-transform:uppercase;
+
+                &:hover{
+                    color: $yellow;
+                }
             }
         }
         

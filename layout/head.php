@@ -26,7 +26,7 @@
   <meta name="theme-color" content="#ffffff">
 
 
-  <title>Título</title>
+  <title>Marvel Test Api</title>
   <!-- Theme CSS - Incluye todo -->
   <link href="dist/css/style.min.css" rel="stylesheet">
 
