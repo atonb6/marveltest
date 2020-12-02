@@ -1,7 +1,7 @@
 var marvel = {
   render: function () {
     var url =
-      "http://gateway.marvel.com/v1/public/characters?ts=1&apikey=0a74b9534733afa9ce2f76b512f13ce8&hash=f7d5b5b321ead510b2a25eeb192e066b";
+      "http://gateway.marvel.com/v1/public/characters?limit=100&ts=1&apikey=0a74b9534733afa9ce2f76b512f13ce8&hash=f7d5b5b321ead510b2a25eeb192e066b";
     var message = document.getElementById("message");
     var footer = document.getElementById("footer");
     var marvelContainer = document.getElementById("marvel-container");
@@ -74,12 +74,12 @@ var marvel = {
       if ($(".marvel-container .marvel-container__card:hidden").length == 0) {
         $("#loadMore").text("No Content").addClass("hidden");
       }
-      $("html,body").animate(
+/*       $("html,body").animate(
         {
           scrollTop: $(this).offset().top,
         },
         1500
-      );
+      ); */
     });
   },
 };
