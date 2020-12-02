@@ -73,6 +73,7 @@ a {
 }
 
 hr {
+  border-top: 1px solid #a8970047;
   &.hr {
     &--bottom {
       margin-top: 70px;
@@ -112,6 +113,8 @@ input {
   appearance: none;
   border: none;
   background-color: white;
+  padding: 7px;
+  height: 100%;
 
   &:hover {
     outline: none;
