@@ -23,7 +23,7 @@ var marvel = {
         for (var i = 0; i < data.data.results.length; i++) {
           var element = data.data.results[i];
 
-          string += "<div class='col-sm-3 mt-4 '>";
+          string += "<div class='col-sm-3 mt-4 marvel-container__wrap'>";
           string += "<div class='card marvel-container__card item'>";
           string +=
             " <img src='" +
@@ -59,19 +59,19 @@ var marvel = {
 
   infinite: function () {
     //button load more
-    $(".marvel-container__card").hide();
-    if ($(".marvel-container .marvel-container__card").length <= 3) {
+    $(".marvel-container__wrap").hide();
+    if ($(".marvel-container .marvel-container__wrap").length <= 3) {
       $("#loadMore").addClass("hidden");
     }
 
-    $(".marvel-container .marvel-container__card").slice(0, 4).show();
+    $(".marvel-container .marvel-container__wrap").slice(0, 4).show();
 
     $("#loadMore").on("click", function (e) {
       e.preventDefault();
-      $(".marvel-container .marvel-container__card:hidden")
+      $(".marvel-container .marvel-container__wrap:hidden")
         .slice(0, 4)
         .slideDown();
-      if ($(".marvel-container .marvel-container__card:hidden").length == 0) {
+      if ($(".marvel-container .marvel-container__wrap:hidden").length == 0) {
         $("#loadMore").text("No Content").addClass("hidden");
       }
 /*       $("html,body").animate(

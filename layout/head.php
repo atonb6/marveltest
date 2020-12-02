@@ -35,4 +35,4 @@
 <body class="vh-100">
 
   <header class="header">
-    <nav id="details-nav" class="navbar navbar-expand-lg">
+    <nav id="details-nav" class="navbar navbar-expand-lg mt-3">

@@ -23,7 +23,7 @@
 
         <div id="marvel-container" class="marvel-container">
         </div>
-        <div class="text-center">
+        <div class="text-center mt-4">
             <a href="#" id="loadMore" class="btn btn--load">Cargar más</a>
         </div>
     </div>
